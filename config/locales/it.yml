@@ -99,6 +99,7 @@ it:
         left: Pagina precedente
         right: Pagina successiva
         a: 
+        shiftv: 
       title: Shortcuts da tastiera
     zen:
       archive: vai all'archivio

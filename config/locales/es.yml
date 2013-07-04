@@ -101,6 +101,7 @@ es:
         r: Refrescar
         shifta: Marcar todo como leído
         v: Ir a URL de historia
+        shiftv: Ir a URL de historia en un tab en el fondo
         left: Página anterior
         right: Siguiente página
         a: 

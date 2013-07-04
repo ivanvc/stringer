@@ -99,6 +99,7 @@ fr:
         left: Page précédente
         right: Page suivante
         a: 
+        shiftv: 
       title: Raccourcis clavier
     zen:
       archive: voir toutes les entrées

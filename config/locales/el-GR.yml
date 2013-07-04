@@ -99,6 +99,7 @@ el-GR:
         left: 
         right: 
         a: 
+        shiftv: 
       title: Συντομεύσεις στο πληκτρολόγιο
     zen:
       archive: εμφάνισης όλων των αντικειμένων

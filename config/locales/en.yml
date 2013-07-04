@@ -102,6 +102,7 @@ en:
         a: Add a feed
         shifta: Mark all as read
         v: Go to story URL
+        shiftv: Go to story URL in a background tab
         left: Previous page
         right: Next page
       title: Keyboard shortcuts

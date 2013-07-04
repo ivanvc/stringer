@@ -99,6 +99,7 @@ sv:
         left: Föregående sida
         right: Nästa sida
         a: 
+        shiftv: 
       title: Kortkommandon
     zen:
       archive: visa alla objekt

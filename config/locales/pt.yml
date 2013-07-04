@@ -99,6 +99,7 @@ pt:
         left: 
         right: 
         a: 
+        shiftv: 
       title: Atalhos do teclado
     zen:
       archive: visualizar todos os itens
