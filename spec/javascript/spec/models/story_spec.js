@@ -150,7 +150,7 @@ describe("Story", function(){
       sinon.stub(window, "open");
       sinon.stub(window, "focus");
 
-      story.openInTab();
+      story.openInBackgroundTab();
       window.open.should.have.been.calledWith("http://localhost", "_blank");
       window.focus.should.have.been.called();
       window.open.restore();
