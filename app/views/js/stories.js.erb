@@ -32,6 +32,10 @@
       StoryApp.viewCurrentInTab();
     });
 
+    Mousetrap.bind(["shift+b", "shift+v"], function() {
+      StoryApp.viewCurrentInBackgroundTab();
+    });
+
     Mousetrap.bind(["m"], function() {
       StoryApp.toggleCurrentKeepUnread();
     });

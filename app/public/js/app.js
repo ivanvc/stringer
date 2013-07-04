@@ -74,6 +74,12 @@ var Story = Backbone.Model.extend({
 
   openInTab: function() {
     window.open(this.get("permalink"), '_blank');
+  },
+
+  openInBackgroundTab: function() {
+    var newTab = window.open(this.get('permalink'), '_blank');
+    newTab.blur();
+    window.focus();
   }
 });
 
@@ -224,6 +230,11 @@ var StoryList = Backbone.Collection.extend({
     this.at(this.cursorPosition).openInTab();
   },
 
+  viewCurrentInBackgroundTab: function() {
+    if (this.cursorPosition < 0) this.cursorPosition = 0;
+    this.at(this.cursorPosition).openInBackgroundTab();
+  },
+
   toggleCurrentKeepUnread: function() {
     if (this.cursorPosition < 0) this.cursorPosition = 0;
     this.at(this.cursorPosition).toggleKeepUnread();
@@ -288,6 +299,10 @@ var AppView = Backbone.View.extend({
 
   viewCurrentInTab: function() {
     this.stories.viewCurrentInTab();
+  },
+
+  viewCurrentInBackgroundTab: function() {
+    this.stories.viewCurrentInBackgroundTab();
   },
 
   toggleCurrentKeepUnread: function() {

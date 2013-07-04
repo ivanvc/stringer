@@ -143,4 +143,17 @@ describe("Story", function(){
       window.open.restore();
     });
   });
+
+  describe("openInBackgroundTab", function(){
+    it("opens a new window", function(){
+      var story = new Story({permalink: "http://localhost"});
+      sinon.stub(window, "open");
+      sinon.stub(window, "focus");
+
+      story.openInTab();
+      window.open.should.have.been.calledWith("http://localhost", "_blank");
+      window.focus.should.have.been.called();
+      window.open.restore();
+    });
+  });
 });
