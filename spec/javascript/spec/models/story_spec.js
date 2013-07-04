@@ -146,14 +146,20 @@ describe("Story", function(){
 
   describe("openInBackgroundTab", function(){
     it("opens a new window", function(){
-      var story = new Story({permalink: "http://localhost"});
-      sinon.stub(window, "open");
+      var story = new Story({permalink: "http://localhost"}),
+          spy = {
+            blur: sinon.spy()
+          };
+      sinon.stub(window, 'open').returns(spy);
       sinon.stub(window, "focus");
 
       story.openInBackgroundTab();
+      spy.blur.should.have.been.calledOnce;
+      window.focus.should.have.been.calledOnce;
       window.open.should.have.been.calledWith("http://localhost", "_blank");
-      window.focus.should.have.been.called();
+
       window.open.restore();
+      window.focus.restore();
     });
   });
 });
